@@ -2,8 +2,9 @@ CC = cc
 # CFLAGS = -Wall -Werror -Wextra
 # CFLAGS = -fsanitize=address -g 
 
-SRC = ./Mandatory/src/main.c ./Mandatory/src/initialize.c
-# SRC = a.c ./Mandatory/src/initialize.c
+SRC = ./Mandatory/src/main.c ./Mandatory/src/initialize.c ./Mandatory/src/utils_1.c
+# SRC = a.c ./Mandatory/src/initialize.c ./Mandatory/src/utils_1.c
+
 OBJC = $(SRC:.c=.o)
 
 checker_m= ./checker_Mac

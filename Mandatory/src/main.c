@@ -3,56 +3,46 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 15:08:49 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/16 15:32:13 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/16 22:12:41 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../main.h"
 
-int main(int c, char **ar)
+int	main(int c, char **ar)
 {
-	atexit(leaks);
+	t_list	*a;
+	t_list	*b;
+	t_list	*lst;
+
+	// atexit(leaks);
+	a = NULL;
+	b = NULL;
+	ft_initialize(c, ar, &a, &b);
+	ft_lst_print(a);
+
+
+
 	
-    t_list *a;
-    t_list *b;
-	a=NULL;
-	b=NULL;
-	
-    ft_initialize(c, ar, &a, &b);
-	// ft_lst_print(a);
-	
-
-
-
-
-    printf("\n\n-----------\n");
-    return 0;
+	ft_free2(&a);
+	return (0);
 }
 
-void ft_lst_print(t_list *a)
+void	ft_lst_print(t_list *ptr)
 {
-	while(!a)
+	printf("\n ------------------------------ \n\n");
+	while (ptr)
 	{
-		printf("-> a->i: %d <-\n", a->i);
-		a=a->next;
+		printf("-  %d  -", ptr->i);
+		ptr = ptr->next;
 	}
+	printf("\n\n ------------------------------ \n");
 }
-void leaks()
+
+void	leaks(void)
 {
 	system("leaks -q push_swap");
 }
-
-// ft_lstnew_bonus.c
-// ft_lstadd_back_bonus.c
-// ft_lstadd_front_bonus.c
-
-// ft_lstlast_bonus.c
-// ft_lstsize_bonus.c
-
-// ft_lstclear_bonus.c
-// ft_lstdelone_bonus.c
-
-// ft_lstiter_bonus.c
