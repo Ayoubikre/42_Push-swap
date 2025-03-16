@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 21:43:44 by aakritah          #+#    #+#             */
-/*   Updated: 2025/02/15 20:53:42 by noctis           ###   ########.fr       */
+/*   Updated: 2025/03/16 15:00:17 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,20 +61,18 @@ char				*ft_itoa(int n);
 
 typedef struct s_list
 {
-	void			*content;
+	int		i;
 	struct s_list	*next;
 
 }					t_list;
-t_list				*ft_lstnew(void *content);
+t_list				*ft_lstnew(int i);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *new);
-void				ft_lstdelone(t_list *lst, void (*del)(void *));
-void				ft_lstclear(t_list **lst, void (*del)(void *));
-void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-						void (*del)(void *));
+void				ft_lstdelone(t_list *lst, void (*del)(int));
+void				ft_lstclear(t_list **lst, void (*del)(int));
+void				ft_lstiter(t_list *lst, void (*f)(int));
 
 char				*get_next_line(int fd);
 

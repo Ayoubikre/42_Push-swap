@@ -1,8 +1,9 @@
 CC = cc
 # CFLAGS = -Wall -Werror -Wextra
-CFLAGS = -Wall
+# CFLAGS = -fsanitize=address -g 
 
-SRC = a.c
+SRC = ./Mandatory/src/main.c ./Mandatory/src/initialize.c
+# SRC = a.c ./Mandatory/src/initialize.c
 OBJC = $(SRC:.c=.o)
 
 checker_m= ./checker_Mac
@@ -17,10 +18,9 @@ all: $(NAME) clean
 
 $(NAME): $(OBJC) 
 #	make -C $(libft_D)
-	$(CC) $(CFLAGS)  $(OBJC) -o $(NAME) $(libft) && echo "\n--------------------\n" && ./$(NAME) 1 2 3         && echo "\n"
-#	$(CC) $(CFLAGS)  $(OBJC) -o $(NAME) $(libft) && echo "\n--------------------\n" && ./$(NAME) 1 2 && echo "\n" | $(checker_m) 1 2
+	$(CC) $(CFLAGS)  $(OBJC) -o $(NAME) $(libft)
 
-%.o: %.c ./main.h
+%.o: %.c ./Mandatory/src/main.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
