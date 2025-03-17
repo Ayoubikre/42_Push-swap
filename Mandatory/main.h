@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 15:20:49 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/17 13:40:19 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/17 22:07:11 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ void	rrb(t_list **b);
 void	rrr(t_list **a, t_list **b);
 
 void	ft_push(t_list **lst1, t_list **lst2);
-void	pa(t_list **a, t_list **b);
-void	pb(t_list **b, t_list **a);
+void	pa(t_list **b, t_list **a);
+void	pb(t_list **a, t_list **b);
 
 void ft_sort(t_list **a, t_list **b);
 

@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 12:57:31 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/17 13:28:43 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/17 22:06:54 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,15 @@ void	ft_push(t_list **lst1, t_list **lst2)
 	ft_lstadd_front(lst2, ptr);
 }
 
-void	pa(t_list **a, t_list **b)
+void	pa(t_list **b, t_list **a)
+{
+	ft_push(b, a);
+	ft_printf("pb\n");
+}
+
+void	pb(t_list **a, t_list **b)
 {
 	ft_push(a, b);
 	ft_printf("pa\n");
 }
 
-void	pb(t_list **b, t_list **a)
-{
-	ft_push(b, a);
-	ft_printf("pb\n");
-}
