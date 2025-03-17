@@ -1,9 +1,16 @@
 CC = cc
-# CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 # CFLAGS = -fsanitize=address -g 
 
-SRC = ./Mandatory/src/main.c ./Mandatory/src/initialize.c ./Mandatory/src/utils_1.c
-# SRC = a.c ./Mandatory/src/initialize.c ./Mandatory/src/utils_1.c
+SRC  = ./Mandatory/src/main.c \
+		./Mandatory/src/initialize.c  \
+		./Mandatory/src/utils_1.c \
+		./Mandatory/moves/swap.c \
+		./Mandatory/moves/shift_up.c \
+		./Mandatory/moves/shift_dw.c \
+		./Mandatory/moves/push.c \
+
+# SRC = a.c ./Mandatory/src/initialize.c ./Mandatory/src/utils_1.c ./Mandatory/src/moves.c
 
 OBJC = $(SRC:.c=.o)
 

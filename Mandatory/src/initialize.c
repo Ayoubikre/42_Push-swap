@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   initialize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 13:10:16 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/16 22:12:14 by noctis           ###   ########.fr       */
+/*   Updated: 2025/03/17 12:50:55 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../main.h"
 
-void	ft_initialize(int c, char **ar, t_list **a, t_list **b)
+void	ft_initialize(int c, char **ar, t_list **a)
 {
 	int		i;
-	int		y;
 	int		k;
 	char	**t;
 
@@ -42,8 +41,8 @@ void	ft_valide1(char *s, t_list **a)
 
 	int (j), i = 0;
 	tmp = ft_split(s, ' ');
-	if (!tmp)
-		((ft_free2(a)), (exit(1)));
+	if (!tmp || !tmp[0])
+		((ft_free2(a)), ft_exit());
 	while (tmp[i])
 	{
 		j = 0;
