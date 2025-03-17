@@ -6,7 +6,7 @@
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 12:29:11 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/17 13:06:54 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/17 13:28:31 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,18 @@ void	ft_swap(t_list **lst)
 void	sa(t_list **a)
 {
 	ft_swap(a);
-	ft_printf("sa");
+	ft_printf("sa\n");
 }
 
 void	sb(t_list **b)
 {
 	ft_swap(b);
-	ft_printf("sb");
+	ft_printf("sb\n");
 }
 
 void	ss(t_list **a, t_list **b)
 {
 	ft_swap(a);
 	ft_swap(b);
-	ft_printf("ss");
+	ft_printf("ss\n");
 }

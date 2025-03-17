@@ -1,46 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shift_up.c                                         :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/17 12:29:09 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/17 13:28:36 by aakritah         ###   ########.fr       */
+/*   Created: 2025/03/17 13:39:13 by aakritah          #+#    #+#             */
+/*   Updated: 2025/03/17 13:43:59 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../main.h"
 
-void	ft_shift_up(t_list **lst)
+void ft_sort(t_list **a, t_list **b)
 {
-	t_list	*ptr;
-	t_list	*ptr2;
+	ft_lst_print_B(*a,*b);
+    
+    
 
-	if (!lst || !*lst || !(*lst)->next)
-		return ;
-	ptr = (*lst);
-	*lst = (*lst)->next;
-	ptr2 = ft_lstlast(*lst);
-	ptr2->next = ptr;
-	ptr->next = NULL;
-}
-
-void	ra(t_list **a)
-{
-	ft_shift_up(a);
-	ft_printf("ra\n");
-}
-
-void	rb(t_list **b)
-{
-	ft_shift_up(b);
-	ft_printf("rb\n");
-}
-
-void	rr(t_list **a, t_list **b)
-{
-	ft_shift_up(a);
-	ft_shift_up(b);
-	ft_printf("rr\n");
 }

@@ -4,6 +4,7 @@ CFLAGS = -Wall -Werror -Wextra
 
 SRC  = ./Mandatory/src/main.c \
 		./Mandatory/src/initialize.c  \
+		./Mandatory/src/sort.c \
 		./Mandatory/src/utils_1.c \
 		./Mandatory/moves/swap.c \
 		./Mandatory/moves/shift_up.c \
