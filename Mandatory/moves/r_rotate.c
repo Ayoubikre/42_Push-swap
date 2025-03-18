@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   shift_dw.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 12:29:08 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/17 13:28:40 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/18 12:13:40 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../main.h"
 
-void	ft_shift_dw(t_list **lst)
+void	ft_r_rotate(t_list **lst)
 {
 	t_list	*ptr;
 	t_list	*ptr2;
@@ -30,19 +30,19 @@ void	ft_shift_dw(t_list **lst)
 
 void	rra(t_list **a)
 {
-	ft_shift_dw(a);
+	ft_r_rotate(a);
 	ft_printf("rra\n");
 }
 
 void	rrb(t_list **b)
 {
-	ft_shift_dw(b);
+	ft_r_rotate(b);
 	ft_printf("rrb\n");
 }
 
 void	rrr(t_list **a, t_list **b)
 {
-	ft_shift_dw(a);
-	ft_shift_dw(b);
+	ft_r_rotate(a);
+	ft_r_rotate(b);
 	ft_printf("rr\n");
 }

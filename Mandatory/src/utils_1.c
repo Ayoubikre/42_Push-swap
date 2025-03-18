@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_1.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 22:07:35 by noctis            #+#    #+#             */
-/*   Updated: 2025/03/17 10:16:04 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/18 14:40:21 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_free2(t_list **lst)
 
 void	ft_exit(void)
 {
-	ft_printf("ERROR\n");
+	write(2, "ERROR\n", 6);
 	exit(1);
 }
 

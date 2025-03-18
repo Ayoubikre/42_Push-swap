@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:37:27 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/16 14:59:58 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/18 12:36:44 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*ft_lstnew(int i)
 	if (!n)
 		return (NULL);
 	n->i = i;
+	n->index = -1;
 	n->next = NULL;
 	return (n);
 }

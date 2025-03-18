@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 15:08:49 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/17 13:41:28 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/18 22:43:33 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,75 +16,45 @@ int	main(int c, char **ar)
 {
 	t_list	*a;
 	t_list	*b;
-	// t_list	*lst;
+	long	s;
 
-	// atexit(leaks);
 	a = NULL;
 	b = NULL;
-	if(c<2)
-		return(0);
+	if (c < 2)
+		return (0);
 	ft_initialize(c, ar, &a);
-
-	ft_sort(&a, &b);
-	
-	// ft_lst_print(a);
-
-	// ft_shift_up(&a);
-	// ft_lst_print(a);
-	
-	// ft_shift_up(&a);
-	// ft_lst_print(a);
-	
-	// ft_shift_dw(&a);
-	// ft_lst_print(a);
-
-	// ft_swap(&a);
-	// ft_lst_print(a);
-	
-	// ft_push(&a, &b);
-	// ft_lst_print(a);
-	
-	// ft_push(&a, &b);
-	// ft_lst_print(a);
-	
-	// ft_push(&a, &b);
-	// ft_lst_print(a);
-	
-	// 	ft_lst_print_B(a,b);
-
-	// ft_push(&b, &a);
-	// ft_lst_print(a);
-	
-	// ft_push(&b, &a);
-	// ft_lst_print(a);
-
+	s = ft_lstsize(a);
+	if (s <= 3)
+		ft_sort_under_3(&a, &b);
+	else if (s <= 5)
+		ft_sort_3_to_5(&a, &b);
+	else
+		ft_sort_over_5(&a, &b);
 	ft_free2(&a);
 	ft_free2(&b);
 	return (0);
+	// change my header name noctis
 }
 
-
-
-void ft_lst_print_B(t_list *a, t_list *b)
+void	ft_lst_print_B(t_list *a, t_list *b)
 {
 	printf("\n------------------------------\n");
 	ft_lst_print(a);
-		printf("\n        ---               \n");
+	printf("\n        ---               \n");
 	ft_lst_print(b);
 	printf("\n------------------------------\n");
- 
 }
+
 void	ft_lst_print(t_list *ptr)
 {
-	if (!ptr )
+	if (!ptr)
 		return ;
-
 	printf("\n");
-	printf("->  %d  -", ptr->i);
+	printf("->  %d:%ld  -", ptr->i, ptr->index);
 	ptr = ptr->next;
 	while (ptr)
 	{
-		printf("-  %d  -", ptr->i);
+		printf("->  %d : %ld  -", ptr->i, ptr->index);
 		ptr = ptr->next;
 	}
 	printf("\n");

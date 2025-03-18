@@ -1,26 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   a.c                                                :+:      :+:    :+:   */
+/*   sort_under_3.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/16 18:03:37 by noctis            #+#    #+#             */
-/*   Updated: 2025/03/16 18:03:38 by noctis           ###   ########.fr       */
+/*   Created: 2025/03/18 21:48:32 by noctis            #+#    #+#             */
+/*   Updated: 2025/03/18 22:38:53 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Mandatory/main.h"
+#include "../main.h"
 
-int main(int c, char** ar)
+void	ft_sort_3_to_5(t_list **a, t_list **b)
 {
-    int i=1;
-    // while(i<c)
-    // {
-    //     ft_valid(ar[i]);
-    //     printf(" arg %d is valid \n ------\n",i);
-    //     i++;
-    // }
-
-    printf(" arg %zu  \n ------\n", ft_counts(ar[1], ' '));
 }
