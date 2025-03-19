@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/08 21:43:44 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/18 14:15:00 by noctis           ###   ########.fr       */
+/*   Created: 2025/03/19 13:07:20 by aakritah          #+#    #+#             */
+/*   Updated: 2025/03/19 13:07:22 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 # include <limits.h>
 # include <stdarg.h>
+# include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdint.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
@@ -61,14 +61,14 @@ char				*ft_itoa(int n);
 
 typedef struct s_list
 {
-	int		i;
-	long index;
+	int				i;
+	long			index;
 	struct s_list	*next;
 
 }					t_list;
 t_list				*ft_lstnew(int i);
 void				ft_lstadd_front(t_list **lst, t_list *new);
-long					ft_lstsize(t_list *lst);
+long				ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(int));

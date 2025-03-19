@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/15 15:08:49 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/19 04:11:53 by noctis           ###   ########.fr       */
+/*   Created: 2025/03/19 13:05:23 by aakritah          #+#    #+#             */
+/*   Updated: 2025/03/19 13:10:48 by aakritah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ int	main(int c, char **ar)
 	if (c < 2)
 		return (0);
 	ft_initialize(c, ar, &a);
+	if (ft_check(a))
+		return (0);
 	s = ft_lstsize(a);
 	if (s <= 3)
-		ft_sort_under_3(&a, &b);
+		ft_sort_under_3(&a);
 	else if (s <= 5)
 		ft_sort_3_to_5(&a, &b);
 	else
@@ -33,10 +35,9 @@ int	main(int c, char **ar)
 	ft_free2(&a);
 	ft_free2(&b);
 	return (0);
-	// change my header name noctis
 }
 
-void	ft_lst_print_B(t_list *a, t_list *b)
+void	ft_lst_print_b(t_list *a, t_list *b)
 {
 	printf("\n------------------------------\n");
 	ft_lst_print(a);
