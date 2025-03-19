@@ -6,7 +6,7 @@
 /*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 15:20:49 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/18 22:39:28 by noctis           ###   ########.fr       */
+/*   Updated: 2025/03/19 04:12:05 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void		ft_push(t_list **lst1, t_list **lst2);
 void		pa(t_list **b, t_list **a);
 void		pb(t_list **a, t_list **b);
 
-void		ft_sort_3_to_5(t_list **a, t_list **b);
+void		ft_sort_under_3(t_list **a, t_list **b);
 
 void		ft_sort_3_to_5(t_list **a, t_list **b);
 

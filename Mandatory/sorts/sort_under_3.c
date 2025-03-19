@@ -6,12 +6,12 @@
 /*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 21:48:32 by noctis            #+#    #+#             */
-/*   Updated: 2025/03/18 22:38:53 by noctis           ###   ########.fr       */
+/*   Updated: 2025/03/19 04:29:32 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../main.h"
 
-void	ft_sort_3_to_5(t_list **a, t_list **b)
+void	ft_sort_under_3(t_list **a, t_list **b)
 {
 }

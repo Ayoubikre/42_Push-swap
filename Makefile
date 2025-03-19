@@ -1,5 +1,5 @@
 CC = cc
-# CFLAGS = -Wall -Werror -Wextra
+# CFLAGS =-Wall -Werror -Wextra
 # CFLAGS = -fsanitize=address -g 
 
 SRC  = ./Mandatory/src/main.c \
