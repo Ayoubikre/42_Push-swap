@@ -38,14 +38,17 @@ $(NAME): $(OBJC)
 	make -C $(libft_D)
 	$(CC) $(CFLAGS)  $(OBJC) -o $(NAME) $(libft)
 
-Mandatory/%.o: %.c ./Mandatory/main.h
+
+$(OBJC): %.o: %.c ./Mandatory/main.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus:$(B_OBJC)
+bonus:$(B_NAME)
+
+$(B_NAME): $(B_OBJC)
 	make -C $(libft_D)
 	$(CC) $(CFLAGS)  $(B_OBJC) -o $(B_NAME) $(libft)
 
-Bonus/%.o: %.c ./Bonus/main.h
+$(B_OBJC): %.o: %.c ./Bonus/main.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

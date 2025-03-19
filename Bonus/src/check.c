@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 16:23:28 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/19 16:32:01 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/19 21:23:24 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ int	ft_check1(char *t, t_list **a, t_list **b)
 
 int	ft_check2(char *t1, char *t2)
 {
-	if (ft_strnstr(t1, t2, ft_strlen(t2)) != NULL && (ft_strlen(t1) - 1 == ft_strlen(t2)))
+	if (ft_strnstr(t1, t2, ft_strlen(t2)) != NULL && (ft_strlen(t1)
+			- 1 == ft_strlen(t2)))
 		return (1);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_1.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aakritah <aakritah@student.42.fr>          +#+  +:+       +#+        */
+/*   By: noctis <noctis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 13:05:19 by aakritah          #+#    #+#             */
-/*   Updated: 2025/03/19 14:29:46 by aakritah         ###   ########.fr       */
+/*   Updated: 2025/03/19 20:31:31 by noctis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,18 +68,4 @@ long	ft_atoi2(const char *str)
 		str++;
 	}
 	return (r * f);
-}
-
-int	ft_check(t_list *a)
-{
-	int	n;
-
-	while (a->next)
-	{
-		n = a->i;
-		if (n > a->next->i)
-			return (0);
-		a = a->next;
-	}
-	return (1);
 }
