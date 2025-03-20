@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS =-Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
 SRC  = ./Mandatory/src/main.c \
 		./Mandatory/src/initialize.c  \
