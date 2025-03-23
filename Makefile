@@ -38,7 +38,6 @@ $(NAME): $(OBJC)
 	make -C $(libft_D)
 	$(CC) $(CFLAGS)  $(OBJC) -o $(NAME) $(libft)
 
-
 $(OBJC): %.o: %.c ./Mandatory/main.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
